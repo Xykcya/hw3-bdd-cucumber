@@ -1,0 +1,1160 @@
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (5.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20150809022253)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/ubuntu/workspace/rottenpotatoes-rails-intro/db/migrate/20150809022253_create_movies.rb:10)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150809022253"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2015-11-15 21:46:10.953908"], ["updated_at", "2015-11-15 21:46:10.953908"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2015-11-15 21:46:10.967970"], ["updated_at", "2015-11-15 21:46:10.967970"]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2015-11-15 21:46:10.978127"], ["updated_at", "2015-11-15 21:46:10.978127"]]
+  [1m[35m (5.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2015-11-15 21:46:10.985894"], ["updated_at", "2015-11-15 21:46:10.985894"]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2015-11-15 21:46:10.993458"], ["updated_at", "2015-11-15 21:46:10.993458"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2015-11-15 21:46:11.005570"], ["updated_at", "2015-11-15 21:46:11.005570"]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2015-11-15 21:46:11.013470"], ["updated_at", "2015-11-15 21:46:11.013470"]]
+  [1m[35m (4.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2015-11-15 21:46:11.019712"], ["updated_at", "2015-11-15 21:46:11.019712"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2015-11-15 21:46:11.028556"], ["updated_at", "2015-11-15 21:46:11.028556"]]
+  [1m[35m (7.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2015-11-15 21:46:11.037625"], ["updated_at", "2015-11-15 21:46:11.037625"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 91.146.64.112 at 2015-11-15 21:52:23 +0000
+Cannot render console from 91.146.64.112! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=R&ratings%5B%5D=PG-13&sort=title
+Completed 302 Found in 24ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?ratings%5B%5D=R&ratings%5B%5D=PG-13&sort=title" for 91.146.64.112 at 2015-11-15 21:52:24 +0000
+Cannot render console from 91.146.64.112! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["R", "PG-13"], "sort"=>"title"}
+  [1m[36m (0.3ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('R', 'PG-13')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 1164ms (Views: 1151.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 91.146.64.112 at 2015-11-15 21:52:29 +0000
+Cannot render console from 91.146.64.112! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=R&ratings%5B%5D=PG-13&sort=title
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5B%5D=R&ratings%5B%5D=PG-13&sort=title" for 91.146.64.112 at 2015-11-15 21:52:29 +0000
+Cannot render console from 91.146.64.112! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["R", "PG-13"], "sort"=>"title"}
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('R', 'PG-13')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.410355"], ["updated_at", "2015-11-15 21:53:27.410355"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.428184"], ["updated_at", "2015-11-15 21:53:27.428184"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.439279"], ["updated_at", "2015-11-15 21:53:27.439279"]]
+  [1m[35m (9.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.451308"], ["updated_at", "2015-11-15 21:53:27.451308"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.460177"], ["updated_at", "2015-11-15 21:53:27.460177"]]
+  [1m[35m (7.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.470741"], ["updated_at", "2015-11-15 21:53:27.470741"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.482259"], ["updated_at", "2015-11-15 21:53:27.482259"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.490966"], ["updated_at", "2015-11-15 21:53:27.490966"]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.504163"], ["updated_at", "2015-11-15 21:53:27.504163"]]
+  [1m[35m (15.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2015-11-15 21:53:27.522769"], ["updated_at", "2015-11-15 21:53:27.522769"]]
+  [1m[36m (11.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:01:09 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11:   
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml__1566055454382439584_35434300'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml__1566055454382439584_35434300'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml__1566055454382439584_35434300'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.223152"], ["updated_at", "2015-11-16 08:02:33.223152"]]
+  [1m[35m (5.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.234040"], ["updated_at", "2015-11-16 08:02:33.234040"]]
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.241635"], ["updated_at", "2015-11-16 08:02:33.241635"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.250038"], ["updated_at", "2015-11-16 08:02:33.250038"]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.258231"], ["updated_at", "2015-11-16 08:02:33.258231"]]
+  [1m[35m (5.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.265690"], ["updated_at", "2015-11-16 08:02:33.265690"]]
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.273514"], ["updated_at", "2015-11-16 08:02:33.273514"]]
+  [1m[35m (11.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.286557"], ["updated_at", "2015-11-16 08:02:33.286557"]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.294516"], ["updated_at", "2015-11-16 08:02:33.294516"]]
+  [1m[35m (5.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2015-11-16 08:02:33.302342"], ["updated_at", "2015-11-16 08:02:33.302342"]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:02:50 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11:   
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___3742128411609984574_46569040'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___3742128411609984574_46569040'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___3742128411609984574_46569040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.7ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:02:55 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11:   
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___3742128411609984574_46569040'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___3742128411609984574_46569040'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___3742128411609984574_46569040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.0ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:03:11 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11:   
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___3742128411609984574_46569040'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___3742128411609984574_46569040'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___3742128411609984574_46569040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.501554"], ["updated_at", "2015-11-16 08:04:04.501554"]]
+  [1m[35m (8.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.515422"], ["updated_at", "2015-11-16 08:04:04.515422"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.523764"], ["updated_at", "2015-11-16 08:04:04.523764"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.532416"], ["updated_at", "2015-11-16 08:04:04.532416"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.542109"], ["updated_at", "2015-11-16 08:04:04.542109"]]
+  [1m[35m (5.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.550128"], ["updated_at", "2015-11-16 08:04:04.550128"]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.557929"], ["updated_at", "2015-11-16 08:04:04.557929"]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.571316"], ["updated_at", "2015-11-16 08:04:04.571316"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.579074"], ["updated_at", "2015-11-16 08:04:04.579074"]]
+  [1m[35m (5.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2015-11-16 08:04:04.586322"], ["updated_at", "2015-11-16 08:04:04.586322"]]
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:04:23 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11:   
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___2547398384343372455_42558900'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___2547398384343372455_42558900'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___2547398384343372455_42558900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.8ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:04:36 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11:   
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___2547398384343372455_42558900'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___2547398384343372455_42558900'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___2547398384343372455_42558900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.4ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:04:48 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IS NULL[0m
+  Rendered movies/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 235ms (Views: 233.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/default.self-e35037e5ec18d837c25cee22d70a5278ffff90defc94bc8d31b1a3b8bda7a85b.css?body=1" for 195.250.182.155 at 2015-11-16 08:04:48 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 195.250.182.155 at 2015-11-16 08:04:48 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 195.250.182.155 at 2015-11-16 08:04:48 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 195.250.182.155 at 2015-11-16 08:04:48 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 195.250.182.155 at 2015-11-16 08:04:48 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 195.250.182.155 at 2015-11-16 08:04:48 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.095941"], ["updated_at", "2015-11-16 08:06:03.095941"]]
+  [1m[35m (8.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.109414"], ["updated_at", "2015-11-16 08:06:03.109414"]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.115962"], ["updated_at", "2015-11-16 08:06:03.115962"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.123680"], ["updated_at", "2015-11-16 08:06:03.123680"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.131568"], ["updated_at", "2015-11-16 08:06:03.131568"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.139622"], ["updated_at", "2015-11-16 08:06:03.139622"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.147644"], ["updated_at", "2015-11-16 08:06:03.147644"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.156005"], ["updated_at", "2015-11-16 08:06:03.156005"]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.164021"], ["updated_at", "2015-11-16 08:06:03.164021"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2015-11-16 08:06:03.172019"], ["updated_at", "2015-11-16 08:06:03.172019"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:06:12 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11:   
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___2632259623451444844_40885760'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___2632259623451444844_40885760'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___2632259623451444844_40885760'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:06:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IS NULL
+  Rendered movies/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 197ms (Views: 193.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/default.self-e35037e5ec18d837c25cee22d70a5278ffff90defc94bc8d31b1a3b8bda7a85b.css?body=1" for 195.250.182.155 at 2015-11-16 08:06:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 195.250.182.155 at 2015-11-16 08:06:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 195.250.182.155 at 2015-11-16 08:06:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 195.250.182.155 at 2015-11-16 08:06:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 195.250.182.155 at 2015-11-16 08:06:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 195.250.182.155 at 2015-11-16 08:06:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies/new" for 195.250.182.155 at 2015-11-16 08:07:57 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (37.7ms)
+Completed 200 OK in 63ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 195.250.182.155 at 2015-11-16 08:08:04 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hsh6azr9qw2GW1p8uDjA2e7ba2DP67eE8hqIbLIyqoP2KVunUHBhZmg24OZQU6ZfVvJ6nU67c42dc06M+HmF1w==", "movie"=>{"title"=>"TEST MOVIE", "rating"=>"G", "release_date(1i)"=>"2015", "release_date(2i)"=>"11", "release_date(3i)"=>"16"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "TEST MOVIE"], ["rating", "G"], ["release_date", "2015-11-16 00:00:00.000000"], ["created_at", "2015-11-16 08:08:04.245047"], ["updated_at", "2015-11-16 08:08:04.245047"]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://saasbook-xykcya.c9.io/movies
+Completed 302 Found in 27ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:08:04 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11:   
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___2632259623451444844_27834200'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___2632259623451444844_27834200'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___2632259623451444844_27834200'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.8ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:08:10 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11:   
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___2632259623451444844_27834200'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___2632259623451444844_27834200'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___2632259623451444844_27834200'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:08:53 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.haml within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for "":String):
+    3: 
+    4: = form_tag movies_path, :method => :get do
+    5:   Include:
+    6:   - @all_ratings.each do |rating|
+    7:     = rating
+    8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+    9:   = submit_tag 'Refresh'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___2632259623451444844_70278118429860'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___2632259623451444844_70278118429860'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.8ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:08:58 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IS NULL
+  Rendered movies/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/default.self-e35037e5ec18d837c25cee22d70a5278ffff90defc94bc8d31b1a3b8bda7a85b.css?body=1" for 195.250.182.155 at 2015-11-16 08:08:58 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 195.250.182.155 at 2015-11-16 08:08:58 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 195.250.182.155 at 2015-11-16 08:08:58 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 195.250.182.155 at 2015-11-16 08:08:58 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 195.250.182.155 at 2015-11-16 08:08:58 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 195.250.182.155 at 2015-11-16 08:08:58 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:09:45 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11: 
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___2632259623451444844_70278120212520'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___2632259623451444844_70278120212520'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___2632259623451444844_70278120212520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.5ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:09:49 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11: 
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___2632259623451444844_70278120212520'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___2632259623451444844_70278120212520'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___2632259623451444844_70278120212520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.1ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:09:51 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.haml within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+     5:   Include:
+     6:   - @all_ratings.each do |rating|
+     7:     = rating
+     8:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), id: 'ratings_#{rating}' # check_box_tag(name, value = "1", checked = false, options = {})
+     9:   = submit_tag 'Refresh'
+    10: 
+    11: 
+  app/views/movies/index.html.haml:8:in `block (2 levels) in _app_views_movies_index_html_haml___2632259623451444844_70278120212520'
+  app/views/movies/index.html.haml:6:in `each'
+  app/views/movies/index.html.haml:6:in `block in _app_views_movies_index_html_haml___2632259623451444844_70278120212520'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___2632259623451444844_70278120212520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.9ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:10:53 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IS NULL
+  Rendered movies/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/default.self-e35037e5ec18d837c25cee22d70a5278ffff90defc94bc8d31b1a3b8bda7a85b.css?body=1" for 195.250.182.155 at 2015-11-16 08:10:53 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 195.250.182.155 at 2015-11-16 08:10:53 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 195.250.182.155 at 2015-11-16 08:10:53 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 195.250.182.155 at 2015-11-16 08:10:53 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 195.250.182.155 at 2015-11-16 08:10:53 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 195.250.182.155 at 2015-11-16 08:10:53 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:12:01 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE 1=0[0m
+  Rendered movies/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/default.self-e35037e5ec18d837c25cee22d70a5278ffff90defc94bc8d31b1a3b8bda7a85b.css?body=1" for 195.250.182.155 at 2015-11-16 08:12:01 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 195.250.182.155 at 2015-11-16 08:12:01 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 195.250.182.155 at 2015-11-16 08:12:01 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 195.250.182.155 at 2015-11-16 08:12:01 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 195.250.182.155 at 2015-11-16 08:12:01 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 195.250.182.155 at 2015-11-16 08:12:01 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&commit=Refresh" for 195.250.182.155 at 2015-11-16 08:12:08 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1", "PG-13"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'PG-13')
+  Rendered movies/index.html.haml within layouts/application (22.1ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/18" for 195.250.182.155 at 2015-11-16 08:12:14 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered movies/show.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:12:15 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG&ratings%5B%5D=PG-13
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG&ratings%5B%5D=PG-13" for 195.250.182.155 at 2015-11-16 08:12:15 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG", "PG-13"]}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'PG-13')
+  Rendered movies/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 195.250.182.155 at 2015-11-16 08:12:22 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/14" for 195.250.182.155 at 2015-11-16 08:12:23 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered movies/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:12:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R" for 195.250.182.155 at 2015-11-16 08:12:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"]}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=title" for 195.250.182.155 at 2015-11-16 08:12:25 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title" for 195.250.182.155 at 2015-11-16 08:12:25 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/14" for 195.250.182.155 at 2015-11-16 08:12:27 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered movies/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:12:28 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title" for 195.250.182.155 at 2015-11-16 08:12:28 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 195.250.182.155 at 2015-11-16 08:12:30 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title" for 195.250.182.155 at 2015-11-16 08:12:30 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:12:33 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title" for 195.250.182.155 at 2015-11-16 08:12:33 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"title"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:12:49 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title" for 195.250.182.155 at 2015-11-16 08:12:49 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:14:26 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title" for 195.250.182.155 at 2015-11-16 08:14:26 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"title"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=release_date" for 195.250.182.155 at 2015-11-16 08:14:58 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date" for 195.250.182.155 at 2015-11-16 08:14:58 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"release_date"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?sort=title" for 195.250.182.155 at 2015-11-16 08:14:59 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title" for 195.250.182.155 at 2015-11-16 08:14:59 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"title"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:16:48 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title" for 195.250.182.155 at 2015-11-16 08:16:48 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"title"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=title" for 195.250.182.155 at 2015-11-16 08:18:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"title"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/default.self-e35037e5ec18d837c25cee22d70a5278ffff90defc94bc8d31b1a3b8bda7a85b.css?body=1" for 195.250.182.155 at 2015-11-16 08:18:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 195.250.182.155 at 2015-11-16 08:18:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 195.250.182.155 at 2015-11-16 08:18:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 195.250.182.155 at 2015-11-16 08:18:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 195.250.182.155 at 2015-11-16 08:18:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 195.250.182.155 at 2015-11-16 08:18:24 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies?sort=release_date" for 195.250.182.155 at 2015-11-16 08:19:04 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date" for 195.250.182.155 at 2015-11-16 08:19:04 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"release_date"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/3" for 195.250.182.155 at 2015-11-16 08:21:00 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 240ms (Views: 209.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies/3" for 195.250.182.155 at 2015-11-16 08:21:05 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered movies/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:21:08 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date" for 195.250.182.155 at 2015-11-16 08:21:08 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"release_date"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/3" for 195.250.182.155 at 2015-11-16 08:21:42 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered movies/show.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 195.250.182.155 at 2015-11-16 08:21:43 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date" for 195.250.182.155 at 2015-11-16 08:21:43 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"release_date"}
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 195.250.182.155 at 2015-11-16 08:24:03 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to https://saasbook-xykcya.c9.io/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date" for 195.250.182.155 at 2015-11-16 08:24:03 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"release_date"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (25.2ms)
+Completed 200 OK in 194ms (Views: 183.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date" for 195.250.182.155 at 2015-11-16 08:28:51 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"release_date"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 260ms (Views: 238.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/default.self-e35037e5ec18d837c25cee22d70a5278ffff90defc94bc8d31b1a3b8bda7a85b.css?body=1" for 195.250.182.155 at 2015-11-16 08:28:52 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 195.250.182.155 at 2015-11-16 08:28:52 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 195.250.182.155 at 2015-11-16 08:28:52 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 195.250.182.155 at 2015-11-16 08:28:52 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 195.250.182.155 at 2015-11-16 08:28:52 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 195.250.182.155 at 2015-11-16 08:28:52 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies?ratings%5B%5D=PG-13&ratings%5B%5D=R&sort=release_date" for 195.250.182.155 at 2015-11-16 08:29:22 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["PG-13", "R"], "sort"=>"release_date"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 66ms (Views: 62.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/default.self-e35037e5ec18d837c25cee22d70a5278ffff90defc94bc8d31b1a3b8bda7a85b.css?body=1" for 195.250.182.155 at 2015-11-16 08:29:22 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 195.250.182.155 at 2015-11-16 08:29:22 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 195.250.182.155 at 2015-11-16 08:29:22 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 195.250.182.155 at 2015-11-16 08:29:22 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 195.250.182.155 at 2015-11-16 08:29:22 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 195.250.182.155 at 2015-11-16 08:29:22 +0000
+Cannot render console from 195.250.182.155! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
